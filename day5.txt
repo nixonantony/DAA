@@ -1,0 +1,137 @@
+i=1;
+while i<=5
+marks=input('Enter the marks ');
+i=i+1;
+disp(['you entered ',num2str(marks)]);
+
+credit=input('Enter the credit of the subject');
+disp(['you entered ',num2str(credit)]);
+end
+
+if(marks>=90)
+    disp('You have got A+')
+    
+elseif(marks>=80)
+    disp('You have got A')
+elseif(marks>=70)
+    disp('You have got B')
+elseif(marks>=60)
+    disp('You have got C')
+elseif(marks>=50)
+    disp('You have got D')
+else
+    disp('You have got F')
+end
+
+
+
+if(marks>=90)
+    result =credit*4.0
+    disp('GPA: '+result)
+elseif(marks>=80)
+    result =credit*4.0
+    disp('GPA: '+result)
+elseif(marks>=70)
+    result =credit*3.7
+    disp('GPA: '+result)
+elseif(marks>=60)
+    result =credit*3.3
+    disp('GPA: '+result)
+elseif(marks>=50)
+    result =credit*3.0
+    disp('GPA: '+result)
+else
+    result =credit*2.7
+    disp('GPA: '+result)
+end
+
+disp('Overall GPA: '+(result/5))
+
+
+
+
+gpa =zeros(1,5);
+marks =zeros(1,5);
+
+for i=1:5
+    marks(i)=input(['Enter marks for subject s'])
+
+    if marks(i)>=90 && marks(i) <=100
+        disp('A')
+        gpa(i)=4.0;
+    elseif marks(i)>=80
+        disp('B')
+        gpa(i)=3.0;
+     elseif marks(i)>=70
+        disp('C')
+        gpa(i)=2.0;
+     elseif marks(i)>=60
+        disp('D')
+        gpa(i)=1.0;
+    else
+       disp('E')
+        gpa(i)=0.0; 
+    end
+end
+
+GPA =mean(gpa);
+fprintf('\nYour gpa is: %.2f\n',GPA);
+
+
+
+ day =input('Enter the day:');
+ 
+ switch day 
+    case 1
+    disp('Monday! ');
+    case 2
+    disp('Tuesday! ');
+    case 3
+    disp('Wednesday! ');
+    case 4
+    disp('Thursday! ');
+    case 5
+    disp('Friday! ');
+    case 6
+    disp('Saturday! ');
+    case 7
+    disp('Sunday! ');
+    otherwise
+        disp('Invalid day');
+end
+
+x=input('Enter the number');
+     
+y=input('Enter the number');
+op =input('Enter the operator (+,-,/,*)','s');
+
+switch op  
+    case '+'
+        add =x+y;
+    disp(add);
+    case '-'
+        sub=x-y;
+   
+    disp(sub );
+    case '*'
+        mul=x*y;
+    disp(mul );
+    case '/'
+    div=x/y;
+    disp(div );
+    otherwise
+        disp('Invalid operator');
+    
+end
+    
+	
+	
+	x = [0,4,5,6,7,8,9];
+y = [0,7,8,9,10,-11,-12];
+
+figure;
+plot(x,y, '-o');
+title('Line Plot: y vs x');
+xlabel('x');
+ylabel('y');
+

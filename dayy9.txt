@@ -1,0 +1,13 @@
+function piValue = getPi()
+    piValue = 3.1416;
+end
+
+
+% getPi
+
+
+function myFunction()
+    disp('Hello , this function has no inputs and no outputs.');
+end
+
+% myFunction
